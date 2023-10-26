@@ -27,7 +27,7 @@ type Manga struct {
 }
 
 func Parse() {
-	fName := "data.csv"
+	fName := "shikimori/data.csv"
 	file, err := os.Create(fName)
 	if err != nil {
 		log.Fatalf("Could not create file, err: %q", err)
@@ -105,7 +105,7 @@ func Parse() {
 		if err != nil {
 			log.Fatal(err)
 		}
-		if err := os.WriteFile("manga.json", js, 0664); err != nil {
+		if err := os.WriteFile("shikimori/manga.json", js, 0664); err != nil {
 			fmt.Println("file knock on coffin")
 		}
 	})
